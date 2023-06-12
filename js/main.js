@@ -30,4 +30,21 @@ for (var i = 1; i <= 18; i++) {
 document.body.appendChild(h1);
 document.body.appendChild(mainGallery);
 
+// Crea el cuadro para la vista de teléfono
+var phoneFrame = document.createElement('div');
+phoneFrame.style.width = '375px';  // Ancho de la pantalla de un iPhone
+phoneFrame.style.height = '667px'; // Alto de la pantalla de un iPhone
+phoneFrame.style.border = '1px solid black';
+phoneFrame.style.margin = '0 auto';
+phoneFrame.style.overflow = 'hidden';
+
+// Envuelve el contenido principal dentro del cuadro para teléfono
+phoneFrame.appendChild(h1);
+phoneFrame.appendChild(mainGallery);
+
+// Añade el cuadro para teléfono al documento
+document.body.innerHTML = '';
+document.body.appendChild(phoneFrame);
+
+
   
